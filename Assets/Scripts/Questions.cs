@@ -10,8 +10,8 @@ public class Questions : MonoBehaviour
     [SerializeField] GameObject[] objek = new GameObject[10]; // 0 = Lv, 1 = Qlue, 2 = Question(IMG), 3 = AnswerText, 4 = TrueAnswer, 5 = TrueAnswer(IMG), 6 = SalahPopup, 7 = SalahTitle, 8 = SalahGambar, 9 SoalGambar
     [SerializeField] GameObject[] keyboard = new GameObject[16]; // Tombol Keyboard
     [SerializeField] GameObject anim; // Animasi Keyboard
-    [SerializeField] Sprite[] soalnya = new Sprite[3]; // Gambar Soal
-    [SerializeField] Sprite[] jawaban = new Sprite[3]; // Gambar Jawaban
+    [SerializeField] Sprite[] soalnya; // Gambar Soal
+    [SerializeField] Sprite[] jawaban; // Gambar Jawaban
     [SerializeField] Sprite[] salah = new Sprite[2]; // Gambar di Popup Salah
     [SerializeField] AudioClip[] sfx = new AudioClip[2]; // Sound Efek Popup Salah
     int lv; // Deklarasi Variabel Level
@@ -23,6 +23,9 @@ public class Questions : MonoBehaviour
                                      { "BULUTANGKIS", "EPOAF", "Olahraga Apakah Ini?" }, // 0,0 - 0,1 - 0,2 (Lv.1)
                                      { "SEPAKBOLA", "GFTNIOA", "Olahraga Apakah Ini?" }, // 1,0 - 1,1 - 1,2 (Lv.2)
                                      { "RENANG", "POLOIJTSKY", "Olahraga Apakah Ini?" }, // 2,0 - 2,1 - 2,2 (Lv.3)
+                                     { "WASIT", "UKNGPARKRML", "Apa Profesi Beliau?" },
+                                     { "ADERAI", "DDYCOBUZER", "Kekar, Berotot, Siapakah Dia?" },
+                                     { "MANCING", "ZRAHBEDOA", "Sedang Apakah Dia?" },
                                    };
 
     Stack<int> button = new Stack<int>(); // Stack untuk menyimpan data tombol kayboard yang dipencet.
