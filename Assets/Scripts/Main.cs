@@ -213,25 +213,4 @@ public class Main : MonoBehaviour
     {
         Questions.onUserClickPlay(Player.level);
     }
-
-    /*
-    // on Click Menu (on Game UI)
-    public void onUserClickGameUIMenu()
-    {
-        popup[2].SetActive(true);
-    }
-
-    // on Click Main Menu (on Game UI -> Menu Popup)
-    public void onUserClickGameUIMenuMain()
-    {
-        homeUI();
-        popup[2].SetActive(false);
-    }
-
-    // on Click OK (on Game UI -> Menu Popup)
-    public void onUserClickGameUIMenuOK()
-    {
-        popup[2].SetActive(false);
-    }
-    */
 }
