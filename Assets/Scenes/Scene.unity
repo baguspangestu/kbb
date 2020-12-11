@@ -4298,7 +4298,7 @@ MonoBehaviour:
     and Desta Show" yang pernah tayang Live di Youtube.
 
 
-    Game Version: 0.01.1'
+    Game Version: 0.01.2'
 --- !u!222 &539811531
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7579,7 +7579,7 @@ MonoBehaviour:
   - {fileID: 1966735275}
   musicClip:
   - {fileID: 8300000, guid: d1b147d9ff0f40b448d7a7a1c3743c87, type: 3}
-  - {fileID: 8300000, guid: 895457321f7f5b74584f8ba0db696b66, type: 3}
+  - {fileID: 8300000, guid: 05ddfe0be82b4884a80883fd919e0cec, type: 3}
   musicSource: {fileID: 1508295990}
   Questions: {fileID: 1046373704}
   Player: {fileID: 1046373705}
@@ -13454,7 +13454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 365.0001}
   m_SizeDelta: {x: 0, y: 885}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1880977849
@@ -13519,7 +13519,7 @@ MonoBehaviour:
     and Desta Show" yang pernah tayang Live di Youtube.
 
 
-    Game Version: 0.01.1'
+    Game Version: 0.01.2'
 --- !u!222 &1880977850
 CanvasRenderer:
   m_ObjectHideFlags: 0

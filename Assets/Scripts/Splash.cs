@@ -31,7 +31,7 @@ public class Splash : MonoBehaviour
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
             slider.value = progress;
-            persen.text = progress * 100f + "%";
+            persen.text = (int)(progress * 100) + "%";
             yield return null;
         }
     }

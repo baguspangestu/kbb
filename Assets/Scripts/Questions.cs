@@ -129,7 +129,8 @@ public class Questions : MonoBehaviour
                 if (Player.level == lv)
                 {
                     Player.level = lv+1;
-                    Player.SavePlayer();
+                    // Karena sudah dipasang di Update(), jadi script dibawah ga perlu dipasang disini lagi
+                    // Player.SavePlayer();
                 }
 
                 objek[4].GetComponent<Text>().text = answer;

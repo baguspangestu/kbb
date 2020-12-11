@@ -53,7 +53,8 @@ public class Main : MonoBehaviour
         // Output di Level UI
         Level.GetComponent<TextMeshProUGUI>().text = "Lv Terbuka: " + playerlevel + " / " + totalLevel + "\n Progress: " + (int)persen + "%";
         // Tombol Resume
-        if (Player.level == 1) {
+        if (Player.level == 1)
+        {
             resume.GetComponentInChildren<TextMeshProUGUI>().text = "Gasskeun!";
         }
         else if (Player.level > totalLevel)
@@ -70,13 +71,13 @@ public class Main : MonoBehaviour
         {
             if (i < Player.level)
             {
-                btnLv[i].interactable = true;
-                btnLv[i].GetComponentInChildren<TextMeshProUGUI>().text = (i+1).ToString();
+                btnLv[i].interactable = true; // Enable
+                btnLv[i].GetComponentInChildren<TextMeshProUGUI>().text = (i+1).ToString(); // Set Number
             }
             else
             {
-                btnLv[i].interactable = false;
-                btnLv[i].GetComponentInChildren<TextMeshProUGUI>().text = null;
+                btnLv[i].interactable = false; // Disable
+                btnLv[i].GetComponentInChildren<TextMeshProUGUI>().text = null; // Del Number
             }
         }
     }
@@ -84,7 +85,7 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Player Data
+        // Load Player Data
         playerData();
         // Buka Home UI
         homeUI();
@@ -93,7 +94,10 @@ public class Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Player Data
+        // Save Player Data
+        Player.SavePlayer(); // Cukup pasang script ini 1 aja (disini aja)
+
+        // Load Player Data
         playerData();
 
         // Set Music untuk Home UI & Game UI
@@ -156,14 +160,14 @@ public class Main : MonoBehaviour
     public void onUserClickSFX()
     {
         Player.sfx = toggle[0].GetComponent<Toggle>().isOn;
-        Player.SavePlayer();
+        // Player.SavePlayer();
     }
 
     // on Click Toogle SFX
     public void onUserClickMusic()
     {
         Player.music = toggle[1].GetComponent<Toggle>().isOn;
-        Player.SavePlayer();
+        // Player.SavePlayer();
     }
 
     // on Click Play
