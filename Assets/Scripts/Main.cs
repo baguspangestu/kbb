@@ -14,6 +14,7 @@ public class Main : MonoBehaviour
     [SerializeField] Questions Questions;
     [SerializeField] Player Player;
     [SerializeField] GameObject Level;
+    [SerializeField] GameObject[] coin;
     public Button[] btnLv;
     public Button resume;
 
@@ -44,6 +45,9 @@ public class Main : MonoBehaviour
         Player.LoadPlayer();
         toggle[0].GetComponent<Toggle>().isOn = Player.sfx;
         toggle[1].GetComponent<Toggle>().isOn = Player.music;
+        // Load Coin
+        coin[0].GetComponent<TextMeshProUGUI>().text = Player.coin.ToString();
+        coin[1].GetComponent<TextMeshProUGUI>().text = Player.coin.ToString();
         // Total Level
         int totalLevel = Questions.data.GetLength(0);
         // Lv Terbuka

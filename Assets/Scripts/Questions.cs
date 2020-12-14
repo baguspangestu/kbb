@@ -129,6 +129,7 @@ public class Questions : MonoBehaviour
                 if (Player.level == lv)
                 {
                     Player.level = lv+1;
+                    Player.coin += 50;
                     // Karena sudah dipasang di Update(), jadi script dibawah ga perlu dipasang disini lagi
                     // Player.SavePlayer();
                 }
