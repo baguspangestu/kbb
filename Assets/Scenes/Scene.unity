@@ -2542,7 +2542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &295989972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4443,7 +4443,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 885}
+  m_SizeDelta: {x: 0, y: 930}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &539811530
 MonoBehaviour:
@@ -4490,21 +4490,24 @@ MonoBehaviour:
 
     Ahsantu Dhoni (1911010031)
 
-    Bagus
-    Pangestu (1911010052)
+    Anggi
+    Windriyani (1911010002)
 
     Kentas Adi Saputra (1911010007)
 
-    Rian Irawan (1911010012)
+    Roni Nur Ramadhani
+    (1911010013)
+
+    Bagus Pangestu (1911010052)
 
 
-    DIPLOMA
-    3 MANAJEMEN INFORMATIKA - AMIK DIAN CIPTA CENDIKIA PRINGSEWU
+    DIPLOMA 3 MANAJEMEN INFORMATIKA
+    - AMIK DIAN CIPTA CENDIKIA PRINGSEWU
 
 
-    Konten di
-    dalam game ini terinspirasi dari segmen "Kuis Bolak Balik" di acara "Vincent
-    and Desta Show" yang pernah tayang Live di Youtube.
+    Konten di dalam game ini terinspirasi
+    dari segmen "Kuis Bolak Balik" di acara "Vincent and Desta Show" yang pernah
+    tayang Live di Youtube.
 
 
     Game Version: 0.01.3'
@@ -4721,7 +4724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 477d7ded9d494b944abd5c59ec1b794a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cc3b64c74c307e458889c30105cbb54, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5817,8 +5820,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278240709
-  m_fontColor: {r: 0.77254903, g: 0.77254903, b: 0, a: 1}
+    rgba: 4282632447
+  m_fontColor: {r: 1, g: 0.78431374, b: 0.2627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5835,8 +5838,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7230,7 +7233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA9 2020 BaCod Studio"
+  m_text: "\xA9 2021 BaCod Studio"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -9740,7 +9743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1298811149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9954,7 +9957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 477d7ded9d494b944abd5c59ec1b794a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cc3b64c74c307e458889c30105cbb54, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11238,8 +11241,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278240709
-  m_fontColor: {r: 0.77254903, g: 0.77254903, b: 0, a: 1}
+    rgba: 4282632447
+  m_fontColor: {r: 1, g: 0.78431374, b: 0.2627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11256,8 +11259,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
