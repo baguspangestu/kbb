@@ -16,16 +16,16 @@ public class Questions : MonoBehaviour
     [SerializeField] AudioClip[] sfx = new AudioClip[2]; // Sound Efek Popup Salah
     int lv; // Deklarasi Variabel Level
     [SerializeField] Main Main; // Main Class
-    [SerializeField] Player Player;
+    [SerializeField] Player Player; // Player Class
 
     // Data Soal & Jawaban <Teks>
     public string[,] data = new string[,] { // [JAWABAN, KARAKTER_TAMBAHAN , QLUE]
                                      { "BULUTANGKIS", "EPOAF", "Olahraga Apakah Ini?" }, // 0,0 - 0,1 - 0,2 (Lv.1)
                                      { "SEPAKBOLA", "GFTNIOA", "Olahraga Apakah Ini?" }, // 1,0 - 1,1 - 1,2 (Lv.2)
                                      { "RENANG", "POLOIJTSKY", "Olahraga Apakah Ini?" }, // 2,0 - 2,1 - 2,2 (Lv.3)
-                                     { "WASIT", "UKNGPARKRML", "Apa Profesi Beliau?" },
-                                     { "ADERAI", "DDYCOBUZER", "Kekar, Berotot, Siapakah Dia?" },
-                                     { "MANCING", "ZRAHBEDOA", "Sedang Apakah Dia?" },
+                                     { "WASIT", "UKNGPARKRML", "Apa Profesi Beliau?" }, // 3,0 - 3,1 - 3,2 (Lv.4)
+                                     { "ADERAI", "DDYCOBUZER", "Kekar, Berotot, Siapakah Dia?" }, // 4,0 - 4,1 - 4,2 (Lv.5)
+                                     { "MANCING", "ZRAHBEDOA", "Sedang Apakah Dia?" }, // 5,0 - 5,1 - 5,2 (Lv.6)
                                    };
 
     Stack<int> button = new Stack<int>(); // Stack untuk menyimpan data tombol kayboard yang dipencet.
@@ -68,7 +68,7 @@ public class Questions : MonoBehaviour
         // Set Object Questions
         objek[2].GetComponent<Image>().sprite = soalnya[lv-1];
 
-        // Split String ke Character
+        // Split String ke Char
         string st = data[lv - 1, 0] + data[lv - 1, 1];
         char[] ch = new char[st.Length];
 
