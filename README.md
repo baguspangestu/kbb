@@ -1,10 +1,12 @@
 # Game Android "Kuis Bolak-Balik"
 
-##### Game Ini Dibuat Karena Tugas Kuliah
+##### GAME INI DIBUAT KARENA TUGAS KULIAH
 
-- **Mata Kuliah: Pengantar Sistem Pakar**
-- **Dosen: Tedy Gunawan, S.Kom., M.T.I.**
-- #### Kelompok 1:
+- **Mata Kuliah:**
+  - Pengantar Sistem Pakar
+- **Dosen:**
+  - Tedy Gunawan, S.Kom., M.T.I.
+- **Kelompok 1:**
   - (1911010031) Ahsantu Dhoni
   - (1911010002) Anggi Windriyani
   - (1911010007) Kentas Adi Saputra
