@@ -15,7 +15,7 @@
 
 ##### DIPLOMA 3 MANAJEMEN INFORMATIKA - AMIK DIAN CIPTA CENDIKIA PRINGSEWU
 
-Konten di dalam game ini terinspirasi dari segmen "Kuis Bolak Balik" di acara _"Vincent and Desta Show"_ yang pernah tayang Live di Youtube.
+Konten di dalam game ini terinspirasi dari segmen _"Kuis Bolak Balik"_ di acara _"Vincent and Desta Show"_ yang pernah tayang Live di Youtube.
 
 **Unity 2019.4.17f1 Personal**
 
