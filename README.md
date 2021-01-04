@@ -7,11 +7,11 @@
   - Tedy Gunawan, S.Kom., M.T.I.
 
 - ### Kelompok:
-  1. Ahsantu Dhoni (1911010031)
-  2. Anggi Windriyani (1911010002)
-  3. Kentas Adi Saputra (1911010007)
-  4. Roni Nur Ramadhani (1911010013)
-  5. Bagus Pangestu (1911010052)
+  - Ahsantu Dhoni (1911010031)
+  - Anggi Windriyani (1911010002)
+  - Kentas Adi Saputra (1911010007)
+  - Roni Nur Ramadhani (1911010013)
+  - Bagus Pangestu (1911010052)
 
 ##### DIPLOMA 3 MANAJEMEN INFORMATIKA - AMIK DIAN CIPTA CENDIKIA PRINGSEWU
 
@@ -19,7 +19,7 @@ Konten di dalam game ini terinspirasi dari segmen "Kuis Bolak Balik" di acara "V
 
 Game Version: 0.01.3
 
-Unity 2019.4.17f1 Personal
+**Unity 2019.4.17f1 Personal**
 
 ### Contact:
 
