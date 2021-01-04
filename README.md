@@ -1,6 +1,6 @@
 # Game Android Kuis Bolak-Balik
 
-**Game Ini Dibuat Karena Tugas Kuliah**
+**Game Ini Dibuat Karena Tugas Kuliah (Pengantar Sistem Pakar)**
 
 - ### Dosen:
 
@@ -15,9 +15,7 @@
 
 ##### DIPLOMA 3 MANAJEMEN INFORMATIKA - AMIK DIAN CIPTA CENDIKIA PRINGSEWU
 
-Konten di dalam game ini terinspirasi dari segmen "Kuis Bolak Balik" di acara "Vincent and Desta Show" yang pernah tayang Live di Youtube.
-
-Game Version: 0.01.3
+Konten di dalam game ini terinspirasi dari segmen "Kuis Bolak Balik" di acara _"Vincent and Desta Show"_ yang pernah tayang Live di Youtube.
 
 **Unity 2019.4.17f1 Personal**
 
