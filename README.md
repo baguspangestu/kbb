@@ -2,10 +2,10 @@
 
 **Game Ini Dibuat Karena Tugas Kuliah**
 
-- #### Mata Kuliah: Pengantar Sistem Pakar
-- #### Dosen: Tedy Gunawan, S.Kom., M.T.I.
+- **Mata Kuliah: Pengantar Sistem Pakar**
+- **Dosen: Tedy Gunawan, S.Kom., M.T.I.**
 
-- ### Kelompok 1:
+- #### Kelompok 1:
   - (1911010031) Ahsantu Dhoni
   - (1911010002) Anggi Windriyani
   - (1911010007) Kentas Adi Saputra
