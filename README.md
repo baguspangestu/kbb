@@ -1,19 +1,24 @@
 # Project Game Kuis Bolak-Balik
 
-## Game Ini Dibuat Karena Tugas Kuliah
+Game Ini Dibuat Karena Tugas Kuliah
 
-- ### DOSEN:
+- ### Dosen:
 
   Tedy Gunawan, S.Kom., M.T.I.
 
-- ### KELOMPOK:
+- ### Kelompok:
+
   Ahsantu Dhoni (1911010031)
+
   Anggi Windriyani (1911010002)
+
   Kentas Adi Saputra (1911010007)
+
   Roni Nur Ramadhani (1911010013)
+
   Bagus Pangestu (1911010052)
 
-## DIPLOMA 3 MANAJEMEN INFORMATIKA - AMIK DIAN CIPTA CENDIKIA PRINGSEWU
+### DIPLOMA 3 MANAJEMEN INFORMATIKA - AMIK DIAN CIPTA CENDIKIA PRINGSEWU
 
 Konten di dalam game ini terinspirasi dari segmen "Kuis Bolak Balik" di acara "Vincent and Desta Show" yang pernah tayang Live di Youtube.
 
