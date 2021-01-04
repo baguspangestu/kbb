@@ -7,7 +7,7 @@ using TMPro;
 public class Questions : MonoBehaviour
 {
     [SerializeField] GameObject[] popup = new GameObject[2]; // 0 = Salah, 1 = Benar
-    [SerializeField] GameObject[] objek = new GameObject[10]; // 0 = Lv, 1 = Qlue, 2 = Question(IMG), 3 = AnswerText, 4 = TrueAnswer, 5 = TrueAnswer(IMG), 6 = SalahPopup, 7 = SalahTitle, 8 = SalahGambar, 9 SoalGambar
+    [SerializeField] GameObject[] objek = new GameObject[11]; // 0 = Lv, 1 = Qlue, 2 = Question(IMG), 3 = AnswerText, 4 = TrueAnswer, 5 = TrueAnswer(IMG), 6 = SalahPopup, 7 = SalahTitle, 8 = SalahGambar, 9 SoalGambar
     [SerializeField] GameObject[] keyboard = new GameObject[16]; // Tombol Keyboard
     [SerializeField] GameObject anim; // Animasi Keyboard
     [SerializeField] Sprite[] soalnya; // Gambar Soal
@@ -27,6 +27,16 @@ public class Questions : MonoBehaviour
                                      { "ADERAI", "DDYCOBUZER", "Kekar, Berotot, Siapakah Dia?" }, // 4,0 - 4,1 - 4,2 (Lv.5)
                                      { "MANCING", "ZRAHBEDOA", "Sedang Apakah Dia?" }, // 5,0 - 5,1 - 5,2 (Lv.6)
                                    };
+
+    public int[,] qlue = new int[,]
+    {
+        {9,4,10,7,5,2,11,8,6,1,3,0,0,0,0,0},
+        {6,5,8,1,3,9,4,7,2,0,0,0,0,0,0,0},
+        {4,6,1,3,5,2,0,0,0,0,0,0,0,0,0,0},
+        {3,5,2,4,1,0,0,0,0,0,0,0,0,0,0,0},
+        {6,5,4,2,1,3,0,0,0,0,0,0,0,0,0,0},
+        {2,3,1,5,6,7,4,0,0,0,0,0,0,0,0,0}
+    };
 
     Stack<int> button = new Stack<int>(); // Stack untuk menyimpan data tombol kayboard yang dipencet.
 
@@ -67,6 +77,45 @@ public class Questions : MonoBehaviour
         objek[1].GetComponent<TextMeshProUGUI>().text = data[lv - 1, 2];
         // Set Object Questions
         objek[2].GetComponent<Image>().sprite = soalnya[lv-1];
+
+        // Split Jawaban
+        int qqq = 2;
+        string q_st = data[lv - 1, 0];
+        char[] q_ch = new char[q_st.Length];
+
+        for (int i = 0; i < q_st.Length; i++)
+        {
+            q_ch[i] = q_st[i];
+        }
+
+        string qlue_text = "";
+        
+        for (int h = 0; h < qqq; h++)
+        {
+            for (int i = 0; i < q_ch.Length; i++)
+            {
+                if (i == qlue[lv - 1,h])
+                {
+                    qlue_text += q_ch[qlue[lv - 1,h]-1];
+                }
+                else
+                {
+                    qlue_text += "_";
+                }
+                
+                if(i != q_ch.Length - 1)
+                {
+                    qlue_text += " ";
+                }
+            }
+                
+        }
+
+            
+
+            
+        
+        objek[10].GetComponent<TextMeshProUGUI>().text = qlue_text;
 
         // Split String ke Char
         string st = data[lv - 1, 0] + data[lv - 1, 1];

@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     public int coin = 100;
     public bool sfx = false;
     public bool music = false;
+    //public int[] qlue = new int[] {0,0,0,0,0,0};
 
     public void SavePlayer()
     {
