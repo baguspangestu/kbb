@@ -24,6 +24,8 @@ Konten di dalam game ini terinspirasi dari segmen "Kuis Bolak Balik" di acara "V
 
 Game Version: 0.01.3
 
+Unity 2019.4.17f1 Personal
+
 ### Contact:
 
 - Facebook: [Bagus Pangestu](https://fb.com/baguspangestucom)
