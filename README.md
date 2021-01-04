@@ -19,6 +19,8 @@ Konten di dalam game ini terinspirasi dari segmen "Kuis Bolak Balik" di acara _"
 
 **Unity 2019.4.17f1 Personal**
 
+- Link Project: https://github.com/baguspangestu/kbb
+
 ### Contact:
 
 - Facebook: [Bagus Pangestu](https://fb.com/baguspangestucom)
