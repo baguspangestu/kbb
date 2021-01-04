@@ -10,13 +10,13 @@ public class Main : MonoBehaviour
     [SerializeField] GameObject[] popup = new GameObject[4]; // 0 = About, 1 = Quit, 2 = Menu, 3 = Benar
     [SerializeField] GameObject[] toggle = new GameObject[2]; // 0 = SFX, 1 = Music
     [SerializeField] AudioClip[] musicClip = new AudioClip[2]; // 0 = Music Home UI & Level UI, 1 = Music Game UI
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] Questions Questions;
-    [SerializeField] Player Player;
-    [SerializeField] GameObject Level;
-    [SerializeField] GameObject[] coin;
-    public Button[] btnLv;
-    public Button resume;
+    [SerializeField] AudioSource musicSource; // Audio Source
+    [SerializeField] Questions Questions; // Questions Class
+    [SerializeField] Player Player; // Player Class
+    [SerializeField] GameObject Level; // Level
+    [SerializeField] GameObject[] coin; // Coin
+    public Button[] btnLv; // Tombol Level
+    public Button resume; // Tombol Lanjutkan
 
     public void homeUI()
     {
@@ -75,13 +75,13 @@ public class Main : MonoBehaviour
         {
             if (i < Player.level)
             {
-                btnLv[i].interactable = true; // Enable
-                btnLv[i].GetComponentInChildren<TextMeshProUGUI>().text = (i+1).ToString(); // Set Number
+                btnLv[i].interactable = true; // Enable Click Button
+                btnLv[i].GetComponentInChildren<TextMeshProUGUI>().text = (i+1).ToString(); // Set Nomor Level
             }
             else
             {
-                btnLv[i].interactable = false; // Disable
-                btnLv[i].GetComponentInChildren<TextMeshProUGUI>().text = null; // Del Number
+                btnLv[i].interactable = false; // Disable Click Button
+                btnLv[i].GetComponentInChildren<TextMeshProUGUI>().text = null; // Del Nomor Level
             }
         }
     }

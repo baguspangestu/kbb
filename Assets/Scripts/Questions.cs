@@ -53,7 +53,7 @@ public class Questions : MonoBehaviour
         popup[1].SetActive(false);
 
         // Hapus Aktifitas Sebelumnya
-        objek[3].GetComponent<TextMeshProUGUI>().text = null; // Hapus Teks Answer
+        objek[3].GetComponent<TextMeshProUGUI>().text = ""; // Hapus Teks Answer
         button.Clear(); // Hapus Data didalam Stack
 
         // Play Animasi Keyboard
