@@ -8053,10 +8053,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5168184630386d54ebc8f7dc0dc07d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Questions: {fileID: 0}
   level: 1
   coin: 100
   sfx: 0
   music: 0
+  qlue1: 0
+  qlue2: 0
+  qlue3: 0
+  qlue4: 0
+  qlue5: 0
+  qlue6: 0
 --- !u!1 &1047382238
 GameObject:
   m_ObjectHideFlags: 0
@@ -8740,9 +8747,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 799742780}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1046373704}
+        m_MethodName: onUserClickQlue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -78,51 +78,8 @@ public class Questions : MonoBehaviour
         // Set Object Questions
         objek[2].GetComponent<Image>().sprite = soalnya[lv-1];
 
-        // Split Jawaban
-        int qqq = 2;
-
-        string q_st = data[lv - 1, 0];
-        char[] q_ch = new char[q_st.Length];
-
-        for (int i = 0; i < q_st.Length; i++)
-        {
-            q_ch[i] = q_st[i];
-        }
-        
-        string[] v_ch = new string[q_st.Length];
-
-        for (int h = 0; h < qqq; h++)
-        {
-            string chrs = q_ch[qlue[lv - 1, h] - 1].ToString();
-
-            for (int i = 0; i < q_ch.Length; i++)
-            {
-                if (i == qlue[lv - 1,h]-1)
-                {
-                    v_ch[i] = chrs;
-                }
-                else if(v_ch[i] == null || v_ch[i] == "_")
-                {
-                    v_ch[i] = "_";
-                }
-            }
-        }
-
-        string qlue_text = "";
-
-        for (int i = 0; i < v_ch.Length; i++)
-        {
-            qlue_text += v_ch[i];
-            if (i != v_ch.Length - 1)
-            {
-                qlue_text += " ";
-            }
-        }
-            
-
-            
-        
-        objek[10].GetComponent<TextMeshProUGUI>().text = qlue_text;
+        // Matikan Teks Qlue
+        objek[10].SetActive(false);
 
         // Split String ke Char
         string st = data[lv - 1, 0] + data[lv - 1, 1];
@@ -141,6 +98,137 @@ public class Questions : MonoBehaviour
             keyboard[i].GetComponentInChildren<TextMeshProUGUI>().text = ch[i].ToString();
             keyboard[i].SetActive(true);
         }
+    }
+
+    public void setQlue()
+    {
+        int qqq = 0;
+
+        if (lv == 1)
+        {
+            qqq = Player.qlue1;
+        }
+        else if (lv == 2)
+        {
+            qqq = Player.qlue2;
+        }
+        else if (lv == 3)
+        {
+            qqq = Player.qlue3;
+        }
+        else if (lv == 4)
+        {
+            qqq = Player.qlue4;
+        }
+        else if (lv == 5)
+        {
+            qqq = Player.qlue5;
+        }
+        else if (lv == 6)
+        {
+            qqq = Player.qlue6;
+        }
+
+        string q_st = data[lv - 1, 0];
+        char[] q_ch = new char[q_st.Length];
+
+        for (int i = 0; i < q_st.Length; i++)
+        {
+            q_ch[i] = q_st[i];
+        }
+
+        string[] v_ch = new string[q_st.Length];
+
+        for (int i = 0; i < qqq; i++)
+        {
+            string chrs = q_ch[qlue[lv - 1, i] - 1].ToString();
+
+            for (int j = 0; j < q_ch.Length; j++)
+            {
+                if (j == qlue[lv - 1, i] - 1)
+                {
+                    v_ch[j] = chrs;
+                }
+                else if (v_ch[j] == null || v_ch[j] == "_")
+                {
+                    v_ch[j] = "_";
+                }
+            }
+        }
+
+        string qlue_text = null;
+
+        for (int i = 0; i < v_ch.Length; i++)
+        {
+            qlue_text += v_ch[i];
+            if (i != v_ch.Length - 1)
+            {
+                qlue_text += " ";
+            }
+        }
+
+        objek[10].GetComponent<TextMeshProUGUI>().text = qlue_text;
+    }
+
+    public void onUserClickQlue()
+    {
+        int qqq = 0;
+
+        if (lv == 1)
+        {
+            qqq = Player.qlue1;
+        }
+        else if (lv == 2)
+        {
+            qqq = Player.qlue2;
+        }
+        else if (lv == 3)
+        {
+            qqq = Player.qlue3;
+        }
+        else if (lv == 4)
+        {
+            qqq = Player.qlue4;
+        }
+        else if (lv == 5)
+        {
+            qqq = Player.qlue5;
+        }
+        else if (lv == 6)
+        {
+            qqq = Player.qlue6;
+        }
+
+        if (qqq < data[lv - 1, 0].Length)
+        {
+
+            if (lv == 1)
+            {
+                ++Player.qlue1;
+            }
+            else if (lv == 2)
+            {
+                ++Player.qlue2;
+            }
+            else if (lv == 3)
+            {
+                ++Player.qlue3;
+            }
+            else if (lv == 4)
+            {
+                ++Player.qlue4;
+            }
+            else if (lv == 5)
+            {
+                ++Player.qlue5;
+            }
+            else if (lv == 6)
+            {
+                ++Player.qlue6;
+            }
+        }
+        setQlue();
+        objek[10].SetActive(true);
     }
 
     // Simpan Nomor/ID Tombol yang dipencet kedalam Stack & Nonaktifkan Tombol Tersebut
