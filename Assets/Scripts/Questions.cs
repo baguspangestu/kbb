@@ -80,6 +80,7 @@ public class Questions : MonoBehaviour
 
         // Split Jawaban
         int qqq = 2;
+
         string q_st = data[lv - 1, 0];
         char[] q_ch = new char[q_st.Length];
 
@@ -87,30 +88,36 @@ public class Questions : MonoBehaviour
         {
             q_ch[i] = q_st[i];
         }
-
-        string qlue_text = "";
         
+        string[] v_ch = new string[q_st.Length];
+
         for (int h = 0; h < qqq; h++)
         {
+            string chrs = q_ch[qlue[lv - 1, h] - 1].ToString();
+
             for (int i = 0; i < q_ch.Length; i++)
             {
-                if (i == qlue[lv - 1,h])
+                if (i == qlue[lv - 1,h]-1)
                 {
-                    qlue_text += q_ch[qlue[lv - 1,h]-1];
+                    v_ch[i] = chrs;
                 }
-                else
+                else if(v_ch[i] == null || v_ch[i] == "_")
                 {
-                    qlue_text += "_";
-                }
-                
-                if(i != q_ch.Length - 1)
-                {
-                    qlue_text += " ";
+                    v_ch[i] = "_";
                 }
             }
-                
         }
 
+        string qlue_text = "";
+
+        for (int i = 0; i < v_ch.Length; i++)
+        {
+            qlue_text += v_ch[i];
+            if (i != v_ch.Length - 1)
+            {
+                qlue_text += " ";
+            }
+        }
             
 
             
