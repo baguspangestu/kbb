@@ -7,8 +7,9 @@ using TMPro;
 public class Questions : MonoBehaviour
 {
     [SerializeField] GameObject[] popup = new GameObject[2]; // 0 = Salah, 1 = Benar
-    [SerializeField] GameObject[] objek = new GameObject[11]; // 0 = Lv, 1 = Qlue, 2 = Question(IMG), 3 = AnswerText, 4 = TrueAnswer, 5 = TrueAnswer(IMG), 6 = SalahPopup, 7 = SalahTitle, 8 = SalahGambar, 9 SoalGambar
+    public GameObject[] objek = new GameObject[11]; // 0 = Lv, 1 = Qlue, 2 = Question(IMG), 3 = AnswerText, 4 = TrueAnswer, 5 = TrueAnswer(IMG), 6 = SalahPopup, 7 = SalahTitle, 8 = SalahGambar, 9 = SoalGambar, 10 = Qlue Text
     [SerializeField] GameObject[] keyboard = new GameObject[16]; // Tombol Keyboard
+    public GameObject[] q_btn = new GameObject[2]; // 0 = HS Bantuan, 1 = Buka
     [SerializeField] GameObject anim; // Animasi Keyboard
     [SerializeField] Sprite[] soalnya; // Gambar Soal
     [SerializeField] Sprite[] jawaban; // Gambar Jawaban
@@ -40,6 +41,8 @@ public class Questions : MonoBehaviour
 
     Stack<int> button = new Stack<int>(); // Stack untuk menyimpan data tombol kayboard yang dipencet.
 
+    public int qqq = 0;
+
     // Method Untuk Mengacak Data di Array
     static void ShuffleArray<T>(T[] arr)
     {
@@ -49,6 +52,58 @@ public class Questions : MonoBehaviour
             T tmp = arr[i];
             arr[i] = arr[r];
             arr[r] = tmp;
+        }
+    }
+
+    void numQlue()
+    {
+        if (lv == 1)
+        {
+            qqq = Player.qlue1;
+        }
+        else if (lv == 2)
+        {
+            qqq = Player.qlue2;
+        }
+        else if (lv == 3)
+        {
+            qqq = Player.qlue3;
+        }
+        else if (lv == 4)
+        {
+            qqq = Player.qlue4;
+        }
+        else if (lv == 5)
+        {
+            qqq = Player.qlue5;
+        }
+        else if (lv == 6)
+        {
+            qqq = Player.qlue6;
+        }
+    }
+
+    public void interaksiHSBtn()
+    {
+        if (qqq == 0)
+        {
+            q_btn[0].GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            q_btn[0].GetComponent<Button>().interactable = true;
+        }
+    }
+
+    public void interaksiBukaBtn()
+    {
+        if (qqq == data[lv - 1, 0].Length || Player.coin < 10)
+        {
+            q_btn[1].GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            q_btn[1].GetComponent<Button>().interactable = true;
         }
     }
 
@@ -79,6 +134,7 @@ public class Questions : MonoBehaviour
         objek[2].GetComponent<Image>().sprite = soalnya[lv-1];
 
         // Matikan Teks Qlue
+        setQlue();
         objek[10].SetActive(false);
 
         // Split String ke Char
@@ -102,32 +158,7 @@ public class Questions : MonoBehaviour
 
     public void setQlue()
     {
-        int qqq = 0;
-
-        if (lv == 1)
-        {
-            qqq = Player.qlue1;
-        }
-        else if (lv == 2)
-        {
-            qqq = Player.qlue2;
-        }
-        else if (lv == 3)
-        {
-            qqq = Player.qlue3;
-        }
-        else if (lv == 4)
-        {
-            qqq = Player.qlue4;
-        }
-        else if (lv == 5)
-        {
-            qqq = Player.qlue5;
-        }
-        else if (lv == 6)
-        {
-            qqq = Player.qlue6;
-        }
+        numQlue();
 
         string q_st = data[lv - 1, 0];
         char[] q_ch = new char[q_st.Length];
@@ -170,38 +201,13 @@ public class Questions : MonoBehaviour
         objek[10].GetComponent<TextMeshProUGUI>().text = qlue_text;
     }
 
-    public void onUserClickQlue()
+    public void onUserClickBuka()
     {
-        int qqq = 0;
-
-        if (lv == 1)
+        if (qqq < data[lv - 1, 0].Length && Player.coin-10 >= 0)
         {
-            qqq = Player.qlue1;
-        }
-        else if (lv == 2)
-        {
-            qqq = Player.qlue2;
-        }
-        else if (lv == 3)
-        {
-            qqq = Player.qlue3;
-        }
-        else if (lv == 4)
-        {
-            qqq = Player.qlue4;
-        }
-        else if (lv == 5)
-        {
-            qqq = Player.qlue5;
-        }
-        else if (lv == 6)
-        {
-            qqq = Player.qlue6;
-        }
-
-        if (qqq < data[lv - 1, 0].Length)
-        {
-
+            // Kurangi Coin
+            Player.coin = Player.coin - 10;
+            // Buka Qlue
             if (lv == 1)
             {
                 ++Player.qlue1;
@@ -229,6 +235,23 @@ public class Questions : MonoBehaviour
         }
         setQlue();
         objek[10].SetActive(true);
+        Main.onUserClickQlueClose();
+    }
+
+    // Tombol Hide & Show Qlue
+    public void onUserClickHS()
+    {
+        if (objek[10].activeSelf == true)
+        {
+            objek[10].SetActive(false);
+            q_btn[0].GetComponentInChildren<Text>().text = "Tampilkan Bantuan";
+        }
+        else
+        {
+            objek[10].SetActive(true);
+            q_btn[0].GetComponentInChildren<Text>().text = "Sembunyikan Bantuan";
+        }
+        Main.onUserClickQlueClose();
     }
 
     // Simpan Nomor/ID Tombol yang dipencet kedalam Stack & Nonaktifkan Tombol Tersebut

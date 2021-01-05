@@ -7,7 +7,7 @@ using TMPro;
 public class Main : MonoBehaviour
 {
     [SerializeField] GameObject[] UI = new GameObject[3]; // 0 = Home UI, 1 = Level UI, 2 = Game UI
-    [SerializeField] GameObject[] popup = new GameObject[4]; // 0 = About, 1 = Quit, 2 = Menu, 3 = Benar
+    [SerializeField] GameObject[] popup = new GameObject[4]; // 0 = About, 1 = Quit, 2 = Qlue, 3 = Benar
     [SerializeField] GameObject[] toggle = new GameObject[2]; // 0 = SFX, 1 = Music
     [SerializeField] AudioClip[] musicClip = new AudioClip[2]; // 0 = Music Home UI & Level UI, 1 = Music Game UI
     [SerializeField] AudioSource musicSource; // Audio Source
@@ -158,6 +158,16 @@ public class Main : MonoBehaviour
                 }
             }
         }
+
+        // Set Teks Button HS Qlue
+        if (Questions.objek[10].activeSelf == true)
+        {
+            Questions.q_btn[0].GetComponentInChildren<Text>().text = "Sembunyikan Bantuan";
+        }
+        else
+        {
+            Questions.q_btn[0].GetComponentInChildren<Text>().text = "Tampilkan Bantuan";
+        }
     }
 
     // on Click Toogle SFX
@@ -217,5 +227,19 @@ public class Main : MonoBehaviour
     public void onUserClickResume()
     {
         Questions.onUserClickPlay(Player.level);
+    }
+
+    // on Click Qlue
+    public void onUserClickQlue()
+    {
+        Questions.interaksiHSBtn();
+        Questions.interaksiBukaBtn();
+        popup[2].SetActive(true);
+    }
+
+    // on Click Ok (on Qlue Popup)
+    public void onUserClickQlueClose()
+    {
+        popup[2].SetActive(false);
     }
 }
