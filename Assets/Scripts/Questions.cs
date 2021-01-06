@@ -7,7 +7,7 @@ using TMPro;
 public class Questions : MonoBehaviour
 {
     [SerializeField] GameObject[] popup = new GameObject[2]; // 0 = Salah, 1 = Benar
-    public GameObject[] objek = new GameObject[11]; // 0 = Lv, 1 = Qlue, 2 = Question(IMG), 3 = AnswerText, 4 = TrueAnswer, 5 = TrueAnswer(IMG), 6 = SalahPopup, 7 = SalahTitle, 8 = SalahGambar, 9 = SoalGambar, 10 = Qlue Text
+    public GameObject[] objek = new GameObject[12]; // 0 = Lv, 1 = Qlue, 2 = Question(IMG), 3 = AnswerText, 4 = TrueAnswer, 5 = TrueAnswer(IMG), 6 = SalahPopup, 7 = SalahTitle, 8 = SalahGambar, 9 = SoalGambar, 10 = Qlue Text, 11 +Coin Text
     [SerializeField] GameObject[] keyboard = new GameObject[16]; // Tombol Keyboard
     public GameObject[] q_btn = new GameObject[2]; // 0 = HS Bantuan, 1 = Buka
     [SerializeField] GameObject anim; // Animasi Keyboard
@@ -297,8 +297,13 @@ public class Questions : MonoBehaviour
                 {
                     Player.level = lv+1;
                     Player.coin += 50;
-                    // Karena sudah dipasang di Update(), jadi script dibawah ga perlu dipasang disini lagi
+                    objek[11].GetComponent<Text>().text = "+50";
+                    // Karena sudah dipasang di Update(), jadi script dibawah ga perlu dipasang disini lagi, jadi saya matikan yg disini
                     // Player.SavePlayer();
+                }
+                else
+                {
+                    objek[11].GetComponent<Text>().text = "+0";
                 }
 
                 objek[4].GetComponent<Text>().text = answer;
