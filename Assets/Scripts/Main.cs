@@ -93,6 +93,7 @@ public class Main : MonoBehaviour
         playerData();
         // Buka Home UI
         homeUI();
+
     }
 
     // Update is called once per frame
@@ -243,3 +244,10 @@ public class Main : MonoBehaviour
         popup[2].SetActive(false);
     }
 }
+
+/**
+ * Dibuat dari 0 menggunakan Unity 2019.4 Personal
+ * Programmer: Bagus Pangestu
+ * Contact: baguspangestu@yandex.com
+ * Project: https://github.com/baguspangestu/kbb
+*/

@@ -15,9 +15,10 @@ public class Questions : MonoBehaviour
     [SerializeField] Sprite[] jawaban; // Gambar Jawaban
     [SerializeField] Sprite[] salah = new Sprite[2]; // Gambar di Popup Salah
     [SerializeField] AudioClip[] sfx = new AudioClip[2]; // Sound Efek Popup Salah
-    int lv; // Deklarasi Variabel Level
+    [SerializeField] int lv; // Deklarasi Variabel Level
     [SerializeField] Main Main; // Main Class
     [SerializeField] Player Player; // Player Class
+    [SerializeField] int nq = 0;
 
     // Data Soal & Jawaban <Teks>
     public string[,] data = new string[,] { // [JAWABAN, KARAKTER_TAMBAHAN , QLUE]
@@ -29,6 +30,7 @@ public class Questions : MonoBehaviour
                                      { "MANCING", "ZRAHBEDOA", "Sedang Apakah Dia?" }, // 5,0 - 5,1 - 5,2 (Lv.6)
                                    };
 
+    // Data urutan qlue yang di buka
     public int[,] qlue = new int[,]
     {
         {9,4,10,7,5,2,11,8,6,1,3,0,0,0,0,0},
@@ -39,9 +41,8 @@ public class Questions : MonoBehaviour
         {2,3,1,5,6,7,4,0,0,0,0,0,0,0,0,0}
     };
 
-    Stack<int> button = new Stack<int>(); // Stack untuk menyimpan data tombol kayboard yang dipencet.
-
-    public int qqq = 0;
+    // Stack untuk menyimpan data tombol kayboard yang dipencet.
+    Stack<int> button = new Stack<int>();
 
     // Method Untuk Mengacak Data di Array
     static void ShuffleArray<T>(T[] arr)
@@ -55,37 +56,88 @@ public class Questions : MonoBehaviour
         }
     }
 
-    void numQlue()
+    // Baca data Qlue yang dibuka
+    void rQlue()
     {
-        if (lv == 1)
-        {
-            qqq = Player.qlue1;
-        }
-        else if (lv == 2)
-        {
-            qqq = Player.qlue2;
-        }
-        else if (lv == 3)
-        {
-            qqq = Player.qlue3;
-        }
-        else if (lv == 4)
-        {
-            qqq = Player.qlue4;
-        }
-        else if (lv == 5)
-        {
-            qqq = Player.qlue5;
-        }
-        else if (lv == 6)
-        {
-            qqq = Player.qlue6;
-        }
+        string[] arr = Player.qlue.Split(',');
+        nq = int.Parse(arr[lv-1]);
     }
 
+    // Tambah data Qlue yang dibuka
+    void wQlue()
+    {
+        string[] arr = Player.qlue.Split(',');
+        string num = null;
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (i + 1 == lv)
+            {
+                num += (int.Parse(arr[i])+1).ToString();
+            }
+            else
+            {
+                num += int.Parse(arr[i]).ToString();
+            }
+
+            if (i + 1 != arr.Length)
+            {
+                num += ",";
+            }
+        }
+        Player.qlue = num;
+    }
+
+    // Set Qlue (Bantuan)
+    public void setQlue()
+    {
+        rQlue();
+
+        string q_st = data[lv - 1, 0];
+        char[] q_ch = new char[q_st.Length];
+
+        for (int i = 0; i < q_st.Length; i++)
+        {
+            q_ch[i] = q_st[i];
+        }
+
+        string[] v_ch = new string[q_st.Length];
+
+        for (int i = 0; i < nq; i++)
+        {
+            string chrs = q_ch[qlue[lv - 1, i] - 1].ToString();
+
+            for (int j = 0; j < q_ch.Length; j++)
+            {
+                if (j == qlue[lv - 1, i] - 1)
+                {
+                    v_ch[j] = chrs;
+                }
+                else if (v_ch[j] == null || v_ch[j] == "_")
+                {
+                    v_ch[j] = "_";
+                }
+            }
+        }
+
+        string qlue_text = null;
+
+        for (int i = 0; i < v_ch.Length; i++)
+        {
+            qlue_text += v_ch[i];
+            if (i != v_ch.Length - 1)
+            {
+                qlue_text += " ";
+            }
+        }
+
+        objek[10].GetComponent<TextMeshProUGUI>().text = qlue_text;
+    }
+
+    // Enabled or Disabled Button Tamoilkan / Sembunyikan Bantuan
     public void interaksiHSBtn()
     {
-        if (qqq == 0)
+        if (nq == 0)
         {
             q_btn[0].GetComponent<Button>().interactable = false;
         }
@@ -95,9 +147,10 @@ public class Questions : MonoBehaviour
         }
     }
 
+    // Enabled or Disabled Button Buka
     public void interaksiBukaBtn()
     {
-        if (qqq == data[lv - 1, 0].Length || Player.coin < 10)
+        if (nq == data[lv - 1, 0].Length || Player.coin < 10)
         {
             q_btn[1].GetComponent<Button>().interactable = false;
         }
@@ -156,82 +209,14 @@ public class Questions : MonoBehaviour
         }
     }
 
-    public void setQlue()
-    {
-        numQlue();
-
-        string q_st = data[lv - 1, 0];
-        char[] q_ch = new char[q_st.Length];
-
-        for (int i = 0; i < q_st.Length; i++)
-        {
-            q_ch[i] = q_st[i];
-        }
-
-        string[] v_ch = new string[q_st.Length];
-
-        for (int i = 0; i < qqq; i++)
-        {
-            string chrs = q_ch[qlue[lv - 1, i] - 1].ToString();
-
-            for (int j = 0; j < q_ch.Length; j++)
-            {
-                if (j == qlue[lv - 1, i] - 1)
-                {
-                    v_ch[j] = chrs;
-                }
-                else if (v_ch[j] == null || v_ch[j] == "_")
-                {
-                    v_ch[j] = "_";
-                }
-            }
-        }
-
-        string qlue_text = null;
-
-        for (int i = 0; i < v_ch.Length; i++)
-        {
-            qlue_text += v_ch[i];
-            if (i != v_ch.Length - 1)
-            {
-                qlue_text += " ";
-            }
-        }
-
-        objek[10].GetComponent<TextMeshProUGUI>().text = qlue_text;
-    }
-
     public void onUserClickBuka()
     {
-        if (qqq < data[lv - 1, 0].Length && Player.coin-10 >= 0)
+        if (nq < data[lv - 1, 0].Length && Player.coin-10 >= 0)
         {
             // Kurangi Coin
             Player.coin = Player.coin - 10;
             // Buka Qlue
-            if (lv == 1)
-            {
-                ++Player.qlue1;
-            }
-            else if (lv == 2)
-            {
-                ++Player.qlue2;
-            }
-            else if (lv == 3)
-            {
-                ++Player.qlue3;
-            }
-            else if (lv == 4)
-            {
-                ++Player.qlue4;
-            }
-            else if (lv == 5)
-            {
-                ++Player.qlue5;
-            }
-            else if (lv == 6)
-            {
-                ++Player.qlue6;
-            }
+            wQlue();
         }
         setQlue();
         objek[10].SetActive(true);
@@ -347,3 +332,10 @@ public class Questions : MonoBehaviour
         }
     }
 }
+
+/**
+ * Dibuat dari 0 menggunakan Unity 2019.4 Personal
+ * Programmer: Bagus Pangestu
+ * Contact: baguspangestu@yandex.com
+ * Project: https://github.com/baguspangestu/kbb
+*/

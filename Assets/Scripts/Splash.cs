@@ -36,3 +36,10 @@ public class Splash : MonoBehaviour
         }
     }
 }
+
+/**
+ * Dibuat dari 0 menggunakan Unity 2019.4 Personal
+ * Programmer: Bagus Pangestu
+ * Contact: baguspangestu@yandex.com
+ * Project: https://github.com/baguspangestu/kbb
+*/

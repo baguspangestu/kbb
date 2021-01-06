@@ -2490,7 +2490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &295989972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4476,7 +4476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &495455007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4990,7 +4990,7 @@ MonoBehaviour:
     tayang Live di Youtube.
 
 
-    Game Version: 0.01.3'
+    Game Version: 0.01.5'
 --- !u!222 &539811531
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8748,9 +8748,10 @@ MonoBehaviour:
   sfx:
   - {fileID: 8300000, guid: 27c79903c79ecb14a90c05d44a1138c6, type: 3}
   - {fileID: 8300000, guid: 153d80fac09d2f44abea27cb1eaf0afc, type: 3}
+  lv: 0
   Main: {fileID: 1046373702}
   Player: {fileID: 1046373705}
-  qqq: 0
+  nq: 0
 --- !u!114 &1046373705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8763,18 +8764,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5168184630386d54ebc8f7dc0dc07d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Questions: {fileID: 0}
   level: 1
   coin: 100
   sfx: 0
   music: 0
-  qlue: 
-  qlue1: 0
-  qlue2: 0
-  qlue3: 0
-  qlue4: 0
-  qlue5: 0
-  qlue6: 0
+  qlue: 0,0,0,0,0,0
 --- !u!1 &1047382238
 GameObject:
   m_ObjectHideFlags: 0
@@ -11199,7 +11193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6666667}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15674,7 +15668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.6862745}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6666667}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
