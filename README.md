@@ -6,9 +6,12 @@
     <td><img src="https://github.com/baguspangestu/kbb/raw/main/2.jpg"  alt="2"></td>
     <td><img src="https://github.com/baguspangestu/kbb/raw/main/3.jpg"  alt="3"></td>
     <td><img src="https://github.com/baguspangestu/kbb/raw/main/4.jpg"  alt="4"></td>
+  </tr>
+  <tr>
     <td><img src="https://github.com/baguspangestu/kbb/raw/main/5.jpg"  alt="5"></td>
     <td><img src="https://github.com/baguspangestu/kbb/raw/main/6.jpg"  alt="6"></td>
     <td><img src="https://github.com/baguspangestu/kbb/raw/main/7.jpg"  alt="7"></td>
+    <td><img src="https://github.com/baguspangestu/kbb/raw/main/8.jpg"  alt="8"></td>
   </tr>
 </table>
 
