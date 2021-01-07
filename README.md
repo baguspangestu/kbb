@@ -20,7 +20,7 @@
 - **Mata Kuliah:**
   - Pengantar Sistem Pakar
 - **Dosen:**
-  - Tedy Gunawan, S.Kom., M.T.I.
+  - Tedi Gunawan, S.Kom., M.T.I.
 - **Kelompok 1:**
   - (1911010031) Ahsantu Dhoni
   - (1911010002) Anggi Windriyani
