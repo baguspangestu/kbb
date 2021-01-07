@@ -15,6 +15,7 @@ public class Main : MonoBehaviour
     [SerializeField] Player Player; // Player Class
     [SerializeField] GameObject Level; // Level
     [SerializeField] GameObject[] coin; // Coin
+    [SerializeField] GameObject version;
     public Button[] btnLv; // Tombol Level
     public Button resume; // Tombol Lanjutkan
 
@@ -89,6 +90,8 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Game Version
+        version.GetComponent<TextMeshProUGUI>().text = "Game v"+Application.version;
         // Load Player Data
         playerData();
         // Buka Home UI
