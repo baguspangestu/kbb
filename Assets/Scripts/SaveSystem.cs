@@ -32,14 +32,13 @@ public static class SaveSystem
         }
         else
         {
-            // Debug.LogError("Save file not found in " + path);
             return null;
         }
     }
 }
 
 /**
- * Dibuat dari 0 menggunakan Unity 2019.4 Personal
+ * Game ini dibuat menggunakan Unity 2019.4 Personal
  * Programmer: Bagus Pangestu
  * Contact: baguspangestu@yandex.com
  * Project: https://github.com/baguspangestu/kbb
