@@ -32,13 +32,18 @@
 
 Konten di dalam game ini terinspirasi dari segmen _"Kuis Bolak Balik"_ di acara _"Vincent and Desta Show"_ yang pernah tayang Live di Youtube.
 
+- Download Game: [kbb.apk](https://github.com/baguspangestu/kbb/raw/main/kbb.apk) (Android)
+- Kunci Jawaban: [Kunci Jawaban.xlsx](https://github.com/baguspangestu/kbb/raw/main/Kunci%20Jawaban.xlsx) (Excel)
+
 **Unity 2019.4.17f1 Personal**
 
-- Download Game: [kbb.apk](https://github.com/baguspangestu/kbb/raw/main/kbb.apk)
+- Download Unity: https://unity3d.com/get-unity/download
+- Download Project: https://github.com/baguspangestu/kbb/archive/main.zip
+
 - Link Project: https://github.com/baguspangestu/kbb
 
 ### Contact:
 
 - Facebook: [Bagus Pangestu](https://fb.com/baguspangestucom)
 - Email: baguspangestu@yandex.com, bacodstudio@gmail.com
-- Website: http://baguspangestu.com , http://bacod.xyz
+- Website: http://baguspangestu.com , https://bacod.xyz , https://bacod-studio.web.app
