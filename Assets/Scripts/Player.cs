@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public int coin = 100;
     public bool sfx = false;
     public bool music = false;
-    public string qlue = "0,0,0,0,0,0";
+    public string qlue = "0";
 
     public void SavePlayer()
     {

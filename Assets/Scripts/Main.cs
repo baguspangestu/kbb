@@ -98,7 +98,6 @@ public class Main : MonoBehaviour
         playerData();
         // Buka Home UI
         homeUI();
-
     }
 
     // Update is called once per frame
