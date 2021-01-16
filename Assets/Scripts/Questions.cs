@@ -20,15 +20,18 @@ public class Questions : MonoBehaviour
     [SerializeField] Player Player; // Player Class
     [SerializeField] int nq = 0;
 
-    // Data Soal & Jawaban <Teks>
-    public string[,] data = new string[,] { // [JAWABAN, KARAKTER_TAMBAHAN , QLUE]
-                                     { "BULUTANGKIS", "EPOAF", "Olahraga Apakah Ini?" }, // 0,0 - 0,1 - 0,2 (Lv.1)
-                                     { "SEPAKBOLA", "GFTNIOA", "Olahraga Apakah Ini?" }, // 1,0 - 1,1 - 1,2 (Lv.2)
-                                     { "RENANG", "POLOIJTSKY", "Olahraga Apakah Ini?" }, // 2,0 - 2,1 - 2,2 (Lv.3)
-                                     { "WASIT", "UKNGPARKRML", "Apa Profesi Beliau?" }, // 3,0 - 3,1 - 3,2 (Lv.4)
-                                     { "ADERAI", "DDYCOBUZER", "Kekar, Berotot, Siapakah Dia?" }, // 4,0 - 4,1 - 4,2 (Lv.5)
-                                     { "MANCING", "ZRAHBEDOA", "Sedang Apakah Dia?" }, // 5,0 - 5,1 - 5,2 (Lv.6)
+    // Data Soal Encrypt
+    public string[,] enData = new string[,] { // [JAWABAN, KARAKTER_TAMBAHAN , QLUE]
+                                     { "uuG7bzOSwcfRTHVHA2WbMA==", "A5eUyMDzZXk=", "eCoz4wto4o8UnW+xIAsJ1WVtnNl7HdOA" }, // 0,0 - 0,1 - 0,2 (Lv.1)
+                                     { "LP2D7yFDzIbXfNIlXlrE/w==", "NW6xyA+nltg=", "eCoz4wto4o8UnW+xIAsJ1WVtnNl7HdOA" }, // 1,0 - 1,1 - 1,2 (Lv.2)
+                                     { "9zsp3AkZr/8=", "/G14b5ikWsLuv0rYRuWuOA==", "eCoz4wto4o8UnW+xIAsJ1WVtnNl7HdOA" }, // 2,0 - 2,1 - 2,2 (Lv.3)
+                                     { "/46cXdBho+E=", "WdxNe4rXA+kACBas1tSIKA==", "nz/BVExtzJHuHk2Bw6wNUdrPq3i2SARz" }, // 3,0 - 3,1 - 3,2 (Lv.4)
+                                     { "XamV8Adb0CE=", "lL9cHN5vfmY5j3ku3MjrSA==", "g+XGHm8TIwqvF//802ubspDosANx/zxPrZTLyEpGCZ0=" }, // 4,0 - 4,1 - 4,2 (Lv.5)
+                                     { "0WFadP2EmbY=", "iCmz1ECYTKDXfNIlXlrE/w==", "Uws012vDtRYJdScGz6dQ71CyRz2Bpm4i" }, // 5,0 - 5,1 - 5,2 (Lv.6)
                                    };
+
+    // Decrypt Data Soal 
+    public string[,] deData;
 
     // Data urutan qlue yang di buka
     public int[,] qlue = new int[,]
@@ -53,6 +56,19 @@ public class Questions : MonoBehaviour
             T tmp = arr[i];
             arr[i] = arr[r];
             arr[r] = tmp;
+        }
+    }
+
+    // Decrypt Data Soal
+    public void dataSoal()
+    {
+        deData = new string[enData.GetLength(0), enData.GetLength(1)];
+        for (int i = 0; i < enData.GetLength(0); i++)
+        {
+            for (int j = 0; j < enData.GetLength(1); j++)
+            {
+                deData[i, j] = Helper.Decrypt(enData[i, j]);
+            }
         }
     }
 
@@ -93,7 +109,7 @@ public class Questions : MonoBehaviour
     {
         rQlue();
 
-        string q_st = data[lv - 1, 0];
+        string q_st = deData[lv - 1, 0];
         char[] q_ch = new char[q_st.Length];
 
         for (int i = 0; i < q_st.Length; i++)
@@ -150,7 +166,7 @@ public class Questions : MonoBehaviour
     // Enabled or Disabled Button Buka
     public void interaksiBukaBtn()
     {
-        if (nq == data[lv - 1, 0].Length || Player.coin < 10)
+        if (nq == deData[lv - 1, 0].Length || Player.coin < 10)
         {
             q_btn[1].GetComponent<Button>().interactable = false;
         }
@@ -182,7 +198,7 @@ public class Questions : MonoBehaviour
         // Set Object Lv
         objek[0].GetComponent<TextMeshProUGUI>().text = "Lv."+lv;
         // Set Object Qlue
-        objek[1].GetComponent<TextMeshProUGUI>().text = data[lv - 1, 2];
+        objek[1].GetComponent<TextMeshProUGUI>().text = deData[lv - 1, 2];
         // Set Object Questions
         objek[2].GetComponent<Image>().sprite = soalnya[lv-1];
 
@@ -191,7 +207,7 @@ public class Questions : MonoBehaviour
         objek[10].SetActive(false);
 
         // Split String ke Char
-        string st = data[lv - 1, 0] + data[lv - 1, 1];
+        string st = deData[lv - 1, 0] + deData[lv - 1, 1];
         char[] ch = new char[st.Length];
 
         for (int i = 0; i < st.Length; i++)
@@ -209,9 +225,10 @@ public class Questions : MonoBehaviour
         }
     }
 
+    // Klik Tombol Buka
     public void onUserClickBuka()
     {
-        if (nq < data[lv - 1, 0].Length && Player.coin-10 >= 0)
+        if (nq < deData[lv - 1, 0].Length && Player.coin-10 >= 0)
         {
             // Kurangi Coin
             Player.coin = Player.coin - 10;
@@ -275,7 +292,7 @@ public class Questions : MonoBehaviour
     {
         int txtlength = objek[3].GetComponent<TextMeshProUGUI>().text.Length;
         if (txtlength != 0) {
-            string answer = data[lv - 1, 0];
+            string answer = deData[lv - 1, 0];
             if (objek[3].GetComponent<TextMeshProUGUI>().text == answer)
             {
                 // Simpan Progress Level
@@ -323,7 +340,7 @@ public class Questions : MonoBehaviour
     // Aksi Klik Tombol Next di Popup Benar
     public void onUserClickNext()
     {
-        if(data.GetLength(0) != lv)
+        if(deData.GetLength(0) != lv)
         {
             onUserClickPlay(lv+1); // Buka soal (level) berikutnya
         }

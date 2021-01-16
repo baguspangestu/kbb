@@ -50,7 +50,7 @@ public class Main : MonoBehaviour
         coin[0].GetComponent<TextMeshProUGUI>().text = Player.coin.ToString();
         coin[1].GetComponent<TextMeshProUGUI>().text = Player.coin.ToString();
         // Total Level
-        int totalLevel = Questions.data.GetLength(0);
+        int totalLevel = Questions.deData.GetLength(0);
         // Lv Terbuka
         int playerlevel = Player.level > totalLevel ? Player.level - 1 : Player.level;
         // Persenan
@@ -90,8 +90,10 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Game Version
+        // Set Text Game Version
         version.GetComponent<TextMeshProUGUI>().text = "Game v"+Application.version;
+        // Decrypt Soal
+        Questions.dataSoal();
         // Load Player Data
         playerData();
         // Buka Home UI
