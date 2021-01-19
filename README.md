@@ -2,16 +2,16 @@
 
 <table>
   <tr>
-    <td><img src="https://github.com/baguspangestu/kbb/raw/main/1.jpg"  alt="1"></td>
-    <td><img src="https://github.com/baguspangestu/kbb/raw/main/2.jpg"  alt="2"></td>
-    <td><img src="https://github.com/baguspangestu/kbb/raw/main/3.jpg"  alt="3"></td>
-    <td><img src="https://github.com/baguspangestu/kbb/raw/main/4.jpg"  alt="4"></td>
+    <td><img src="https://bit.ly/sskbb01"  alt="1"></td>
+    <td><img src="https://bit.ly/sskbb02"  alt="2"></td>
+    <td><img src="https://bit.ly/sskbb03"  alt="3"></td>
+    <td><img src="https://bit.ly/sskbb04"  alt="4"></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/baguspangestu/kbb/raw/main/5.jpg"  alt="5"></td>
-    <td><img src="https://github.com/baguspangestu/kbb/raw/main/6.jpg"  alt="6"></td>
-    <td><img src="https://github.com/baguspangestu/kbb/raw/main/7.jpg"  alt="7"></td>
-    <td><img src="https://github.com/baguspangestu/kbb/raw/main/8.jpg"  alt="8"></td>
+    <td><img src="https://bit.ly/sskbb05"  alt="5"></td>
+    <td><img src="https://bit.ly/sskbb06"  alt="6"></td>
+    <td><img src="https://bit.ly/sskbb07"  alt="7"></td>
+    <td><img src="https://bit.ly/sskbb08"  alt="8"></td>
   </tr>
 </table>
 
@@ -32,8 +32,9 @@
 
 Konten di dalam game ini terinspirasi dari segmen _"Kuis Bolak Balik"_ di acara _"Vincent and Desta Show"_ yang pernah tayang Live di Youtube.
 
-- Download Game: [kbb.apk](https://github.com/baguspangestu/kbb/raw/main/kbb.apk) (Android)
-- Kunci Jawaban: [Kunci Jawaban.xlsx](https://github.com/baguspangestu/kbb/raw/main/Kunci%20Jawaban.xlsx) (Excel)
+- Download Game: [kbb.apk](https://github.com/baguspangestu/kbb/raw/main/kbb.apk)
+- Deskripsi Game: [Word](https://github.com/baguspangestu/kbb/raw/main/Deskripsi%20Game.docx) - [PDF](https://github.com/baguspangestu/kbb/raw/main/Deskripsi%20Game.pdf)
+- Kunci Jawaban: [Excel](https://github.com/baguspangestu/kbb/raw/main/Kunci%20Jawaban.xlsx) - [PDF](https://github.com/baguspangestu/kbb/raw/main/Kunci%20Jawaban.pdf)
 
 **Unity 2019.4.17f1 Personal**
 
