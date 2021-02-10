@@ -17,8 +17,6 @@
 
 ##### GAME INI DIBUAT KARENA TUGAS KULIAH
 
-- **Mata Kuliah:**
-  - Pengantar Sistem Pakar
 - **Dosen:**
   - Tedi Gunawan, S.Kom., M.T.I.
 - **Kelompok 1:**
