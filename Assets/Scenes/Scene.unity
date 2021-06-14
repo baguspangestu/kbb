@@ -8848,7 +8848,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 10, y: -300}
-  m_SizeDelta: {x: 1000, y: 500}
+  m_SizeDelta: {x: 720, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023317814
 MonoBehaviour:
@@ -8869,7 +8869,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6e25e0c8c17d11e4bbd62af6255615c8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cfc091462c2d4d04d9d6b974e5fa52c1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9027,11 +9027,13 @@ MonoBehaviour:
   - {fileID: -7321310404649544054, guid: 98e30ca532bf363479915f667ef40bf1, type: 3}
   - {fileID: 1258829429525354399, guid: dfd294c0cebf87c42ac5afe2ee2ed929, type: 3}
   salah:
-  - {fileID: 21300000, guid: 988e209c66d28b84891914d09b701231, type: 3}
   - {fileID: 21300000, guid: b8a5edf384aa6e343a55d43a44775a4b, type: 3}
+  - {fileID: 21300000, guid: 988e209c66d28b84891914d09b701231, type: 3}
+  - {fileID: 21300000, guid: 6adf8e896c5fd7d4c99ea5eca04fc93c, type: 3}
   sfx:
-  - {fileID: 8300000, guid: 27c79903c79ecb14a90c05d44a1138c6, type: 3}
   - {fileID: 8300000, guid: 153d80fac09d2f44abea27cb1eaf0afc, type: 3}
+  - {fileID: 8300000, guid: 27c79903c79ecb14a90c05d44a1138c6, type: 3}
+  - {fileID: 8300000, guid: 0d4f3eeb53e64ab4092e78986eaab722, type: 3}
   lv: 0
   Main: {fileID: 1046373702}
   Player: {fileID: 1046373705}

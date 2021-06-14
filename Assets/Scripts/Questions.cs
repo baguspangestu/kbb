@@ -30,7 +30,7 @@ public class Questions : MonoBehaviour
                                      { "0WFadP2EmbY=", "iCmz1ECYTKDXfNIlXlrE/w==", "Uws012vDtRYJdScGz6dQ71CyRz2Bpm4i" }, // 5,0 - 5,1 - 5,2 (Lv.6)
                                    };
 
-    // Decrypt Data Soal 
+    // Decrypt Data Soal
     public string[,] deData;
 
     // Data urutan qlue yang di buka
@@ -287,6 +287,13 @@ public class Questions : MonoBehaviour
         }
     }
 
+    void getSalah(int a, string b)
+    {
+        objek[6].GetComponent<AudioSource>().clip = sfx[a];
+        objek[7].GetComponent<Text>().text = b;
+        objek[8].GetComponent<Image>().sprite = salah[a];
+    }
+
     // Aksi tombol Pancal
     public void onUserClickPancal()
     {
@@ -317,21 +324,22 @@ public class Questions : MonoBehaviour
             else
             {
                 popup[0].SetActive(false);
-                int rd = Random.Range(0, 100); // Acak Bacotan
-                if (rd >= 50)
+                int rd = Random.Range(1, 4); // Acak 1, 2, atau 3
+                if (rd == 1)
                 {
-                    // Bacot Dedy Corbuzier
-                    objek[6].GetComponent<AudioSource>().clip = sfx[1];
-                    objek[7].GetComponent<Text>().text = "TOLOL!";
-                    objek[8].GetComponent<Image>().sprite = salah[1];
+                    // Dedy Corbuzier [Tolol]
+                    getSalah(0, "TOLOL!");
                 }
+                else if (rd == 2)
+                {
+                    // Yudha Keling [Goblok]
+                    getSalah(1, "GOBLOK!");
+                } 
                 else
                 {
-                    // Bacot Yudha Keling
-                    objek[6].GetComponent<AudioSource>().clip = sfx[0];
-                    objek[7].GetComponent<Text>().text = "GOBLOK!";
-                    objek[8].GetComponent<Image>().sprite = salah[0];
-                } 
+                    // Blook Goblok
+                    getSalah(2, "BLOK GOBLOK!");
+                }
                 popup[0].SetActive(true);
             }
         } 
