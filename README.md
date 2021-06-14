@@ -18,13 +18,11 @@
 ##### GAME INI DIBUAT KARENA TUGAS KULIAH
 
 - **Dosen:**
-  - Tedi Gunawan, S.Kom., M.T.I.
+  - Dewi Triyanti, S.Kom., M.T.I.
 - **Kelompok 1:**
-  - (1911010031) Ahsantu Dhoni
   - (1911010002) Anggi Windriyani
-  - (1911010007) Kentas Adi Saputra
-  - (1911010013) Roni Nur Ramadhani
   - (1911010052) Bagus Pangestu
+  - (1911010004) Dwi Shela Wijiyas Putri
 
 ##### DIPLOMA 3 MANAJEMEN INFORMATIKA - AMIK DIAN CIPTA CENDIKIA PRINGSEWU
 
